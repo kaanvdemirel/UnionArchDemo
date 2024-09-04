@@ -29,7 +29,7 @@ namespace PanelForm
         {
             LoadProducts();
         }
-
+        
 
         private void LoadProducts()
         {
@@ -67,13 +67,86 @@ namespace PanelForm
 
 
         }
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
-
+            LoadOrders();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+
+        private void LoadOrders()
         {
+
+            try
+            {
+
+                using (SqlConnection connection = new SqlConnection(_connectionString))
+                {
+                    connection.Open();
+                    string query = "select * from orders";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
+
+                    DataTable dataTable = new DataTable();
+                    sqlDataAdapter.Fill(dataTable);
+
+
+                    dataGridView1.DataSource = dataTable;
+
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Bir hata oluþtu.");
+            }
+
+
+
+
+        }
+        private async void button5_Click(object sender, EventArgs e)
+        {
+            LoadCustomers();
+        }
+        private void LoadCustomers()
+        {
+
+            try
+            {
+
+                using (SqlConnection connection = new SqlConnection(_connectionString))
+                {
+                    connection.Open();
+                    string query = "select * from orders";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
+
+                    DataTable dataTable = new DataTable();
+                    sqlDataAdapter.Fill(dataTable);
+
+
+                    dataGridView1.DataSource = dataTable;
+
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Bir hata oluþtu.");
+            }
+
+
+
 
         }
 
@@ -82,8 +155,44 @@ namespace PanelForm
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private async void button3_Click(object sender, EventArgs e)
         {
+            LoadCategories();
+        }
+        private void LoadCategories()
+        {
+
+            try
+            {
+
+                using (SqlConnection connection = new SqlConnection(_connectionString))
+                {
+                    connection.Open();
+                    string query = "select * from categories";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
+
+                    DataTable dataTable = new DataTable();
+                    sqlDataAdapter.Fill(dataTable);
+
+
+                    dataGridView1.DataSource = dataTable;
+
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Bir hata oluþtu.");
+            }
+
+
+
 
         }
     }
