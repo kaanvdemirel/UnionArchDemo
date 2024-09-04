@@ -13,14 +13,14 @@ namespace WebAPI.Controllers
     {
 
          
-        [HttpGet]
+        [HttpGet("getAll")]
 
         public List<Product> Get() {
 
 
             IProductService productService = new ProductManager(new EfProductDal());
-        
-           var result = productService.GetAll();
+
+            var result = productService.GetAll();
 
             return result.Data;
         

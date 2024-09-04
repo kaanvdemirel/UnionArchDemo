@@ -19,7 +19,7 @@ namespace ProductTest
         {
 
             _efProductDal = new EfProductDal();
-            _productManager = new ProductManager( _efProductDal );  
+            _productManager = new ProductManager( _efProductDal);  
 
 
 
@@ -41,7 +41,6 @@ namespace ProductTest
 
 
             Assert.IsNotNull( products,"Ürünler null olmamalýdýr." );
-
            
 
 
