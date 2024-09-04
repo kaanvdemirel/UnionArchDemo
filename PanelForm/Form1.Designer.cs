@@ -41,20 +41,19 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
-            panel1.Location = new Point(1, 12);
+            panel1.Location = new Point(8, -1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(138, 395);
+            panel1.Size = new Size(138, 352);
             panel1.TabIndex = 0;
             // 
             // button3
             // 
             button3.Font = new Font("Microsoft PhagsPa", 9F, FontStyle.Bold);
-            button3.Location = new Point(-2, 262);
+            button3.Location = new Point(8, 306);
             button3.Name = "button3";
-            button3.Size = new Size(145, 148);
+            button3.Size = new Size(133, 164);
             button3.TabIndex = 2;
             button3.Text = "Categories";
             button3.UseVisualStyleBackColor = true;
@@ -63,9 +62,9 @@
             // button2
             // 
             button2.Font = new Font("Microsoft PhagsPa", 9F, FontStyle.Bold);
-            button2.Location = new Point(0, 136);
+            button2.Location = new Point(-5, 159);
             button2.Name = "button2";
-            button2.Size = new Size(136, 132);
+            button2.Size = new Size(141, 148);
             button2.TabIndex = 1;
             button2.Text = "Orders";
             button2.UseVisualStyleBackColor = true;
@@ -74,9 +73,9 @@
             // button1
             // 
             button1.Font = new Font("Microsoft PhagsPa", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(3, -2);
+            button1.Location = new Point(-7, 3);
             button1.Name = "button1";
-            button1.Size = new Size(136, 147);
+            button1.Size = new Size(141, 160);
             button1.TabIndex = 0;
             button1.Text = "Products";
             button1.UseVisualStyleBackColor = true;
@@ -85,9 +84,9 @@
             // button5
             // 
             button5.Font = new Font("Microsoft PhagsPa", 9F, FontStyle.Bold);
-            button5.Location = new Point(3, 401);
+            button5.Location = new Point(8, 465);
             button5.Name = "button5";
-            button5.Size = new Size(143, 144);
+            button5.Size = new Size(138, 147);
             button5.TabIndex = 3;
             button5.Text = "Customers";
             button5.UseVisualStyleBackColor = true;
@@ -96,10 +95,10 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(145, 1);
+            dataGridView1.Location = new Point(145, -1);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1142, 544);
+            dataGridView1.Size = new Size(1414, 613);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
@@ -107,7 +106,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1284, 539);
+            ClientSize = new Size(1559, 608);
+            Controls.Add(button3);
             Controls.Add(button5);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
