@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button3 = new Button();
             button2 = new Button();
             button1 = new Button();
+            button3 = new Button();
             button5 = new Button();
             dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
@@ -48,17 +48,6 @@
             panel1.Size = new Size(138, 352);
             panel1.TabIndex = 0;
             // 
-            // button3
-            // 
-            button3.Font = new Font("Microsoft PhagsPa", 9F, FontStyle.Bold);
-            button3.Location = new Point(8, 306);
-            button3.Name = "button3";
-            button3.Size = new Size(133, 164);
-            button3.TabIndex = 2;
-            button3.Text = "Categories";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
             // button2
             // 
             button2.Font = new Font("Microsoft PhagsPa", 9F, FontStyle.Bold);
@@ -73,13 +62,24 @@
             // button1
             // 
             button1.Font = new Font("Microsoft PhagsPa", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(-7, 3);
+            button1.Location = new Point(-7, -2);
             button1.Name = "button1";
-            button1.Size = new Size(141, 160);
+            button1.Size = new Size(143, 165);
             button1.TabIndex = 0;
             button1.Text = "Products";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Microsoft PhagsPa", 9F, FontStyle.Bold);
+            button3.Location = new Point(8, 306);
+            button3.Name = "button3";
+            button3.Size = new Size(138, 164);
+            button3.TabIndex = 2;
+            button3.Text = "Categories";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button5
             // 
@@ -95,7 +95,7 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(145, -1);
+            dataGridView1.Location = new Point(152, -1);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(1414, 613);
