@@ -11,22 +11,46 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
+        IProductService _productService;
 
-         
-        [HttpGet("getAll")]
-
-        public List<Product> Get() {
-
-
-            IProductService productService = new ProductManager(new EfProductDal());
-
-            var result = productService.GetAll();
-
-            return result.Data;
-        
+        public ProductsController(IProductService productService)
+        {
+            _productService = productService;
         }
 
+        [HttpGet("getAll")]
+
+        public IActionResult Get()
+        {
+
+            var result = _productService.GetAll();
+
+            if (result.Success)
+
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
 
 
+
+        }
+
+        [HttpPost("add")]
+
+        public IActionResult Add(Product product)
+        {
+            var result = _productService.Add(product);
+
+            if (result.Success)
+            {
+
+                return Ok(result);
+
+
+            }
+            return BadRequest(result);
+        }
     }
 }
