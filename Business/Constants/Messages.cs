@@ -14,5 +14,8 @@ namespace Business.Constants
         public static string ProductNameInvalid = "Ürün ismi en az 2 karakter olmalıdır.";
         public static string MaintenanceTime = "Bakım Zamanı";
         public static string ProductsListed = "Ürünler listelendi.";
+        public static string ProductDeleted = "Ürün Silindi.";
+        public static string ProductUpdated = "Ürün Güncellendi.";
+        public static string ProductNotFound = "Ürün Bulunamadı";
     }
 }
