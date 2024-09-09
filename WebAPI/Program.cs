@@ -6,13 +6,9 @@ using DataAccess.Concrete.EntityFramework;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 builder.Services.AddSingleton<IProductService, ProductManager>();
-builder.Services.AddSingleton<IProductDal,EfProductDal>();      
-
-
-
+builder.Services.AddSingleton<IProductDal, EfProductDal>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -27,8 +23,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// Enable serving static files
+app.UseStaticFiles(); // Make sure this is present to serve static files like index.html
 
+// Redirect root to index.html
+app.MapGet("/", (HttpContext context) =>
+{
+    context.Response.Redirect("/pages/index.html");
+});
+
+app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
