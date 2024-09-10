@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface ICustomerService
+    public interface IOrderService
     {
 
-        IDataResult<List<Customer>> GetAll();
-        IResult Add(Customer customer);
-        IResult Update(Customer customer);
-        IResult Delete(Customer customer);
+        IDataResult<List<Order>> GetAll();
+        IResult Add(Order order);
+        IResult Update(Order order);
+        IResult Delete(Order order);
     }
 }

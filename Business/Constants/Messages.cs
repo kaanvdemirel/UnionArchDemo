@@ -17,5 +17,13 @@ namespace Business.Constants
         public static string ProductDeleted = "Ürün Silindi.";
         public static string ProductUpdated = "Ürün Güncellendi.";
         public static string ProductNotFound = "Ürün Bulunamadı";
+        internal static string CustomerAdded = "Müşteri Eklendi.";
+        internal static string CustomerDeleted = "Müşteri Silindi.";
+        internal static string CustomerUpdated = "Müşteri Güncellendi.";
+        internal static string CustomerListed = "Müşteriler Listelendi.";
+        internal static string OrderAdded = "Ürün Eklendi.";
+        internal static string OrderDeleted = "Ürün Silindi.";
+        internal static string OrderListed = "Ürünler  Listelendi.";
+        internal static string OrderUpdated = "Ürün Güncellendi.";
     }
 }

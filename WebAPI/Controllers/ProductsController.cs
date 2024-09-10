@@ -56,7 +56,7 @@ namespace WebAPI.Controllers
         [HttpPost("delete")]
 
 
-        public IActionResult Delete( [FromBody] Product product) { 
+        public IActionResult Delete(  Product product) { 
         
                
             var result = _productService.Delete(product);
